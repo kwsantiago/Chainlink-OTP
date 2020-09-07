@@ -13,9 +13,9 @@ Included is a scope of work based on the project requirements for the workshop.
 
 ## Team Members
 
-Kyle W. Santiago (KWS)
-Thomas Potter (TC)
-William K. Santiago (WKS)
+Kyle W. Santiago (KWS),
+Thomas Potter (TC),
+William K. Santiago (WKS),
 Thomas Greco (TG)
 
 ## Proposal Overview
