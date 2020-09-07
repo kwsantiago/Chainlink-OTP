@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-![Image of Yaktocat](https://github.com/kwsantiago/Chainlink-OTP/blob/master/images/otp.jpeg)
-
-
-=======
 ![Screenshot](./images/otp.jpeg)
->>>>>>> 0eb20c952e44781f90686e0b70426f15135b1610
 # Chainlink OTP Project
 
 Chainlink Hackathon 2020: Building Universally Connected Smart Contracts
