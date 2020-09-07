@@ -1,5 +1,5 @@
-![Screenshot](./images/otp.jpeg)
-# Chainlink One Time Pad (OTP) Project
+https://github.com/kwsantiago/Chainlink-OTP/blob/master/images/otp.jpeg
+# Chainlink OTP Project
 
 Chainlink Hackathon 2020: Building Universally Connected Smart Contracts
 
