@@ -1,4 +1,4 @@
-https://github.com/kwsantiago/Chainlink-OTP/blob/master/images/otp.jpeg
+![Screenshot](./images/otp.jpeg)
 # Chainlink OTP Project
 
 Chainlink Hackathon 2020: Building Universally Connected Smart Contracts
