@@ -39,3 +39,6 @@ Thomas Greco (TG)
 5. Decrypt message using one-time pad information that has been physically exchanged securly
 
 ## Chainlink OTP Logical Overview
+![Screenshot](./images/chainlink_otp_logica_overview.png)
+
+
