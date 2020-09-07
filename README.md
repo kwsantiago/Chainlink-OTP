@@ -1,4 +1,4 @@
-<p![Screenshot](./images/otp.jpeg)</p
+![Screenshot](./images/otp.jpeg)
 # Chainlink One Time Pad (OTP) Project
 
 Chainlink Hackathon 2020: Building Universally Connected Smart Contracts
