@@ -13,12 +13,9 @@ Included is a scope of work based on the project requirements for the workshop.
 
 ## Team Members
 
-Kyle W. Santiago (KWS)
-
-Thomas Potter (TC)
-
-William K. Santiago (WKS)
-
+Kyle W. Santiago (KWS),
+Thomas Potter (TC),
+William K. Santiago (WKS),
 Thomas Greco (TG)
 
 ## Proposal Overview
@@ -36,6 +33,9 @@ Thomas Greco (TG)
 2. IPFS returns hash content of encrypted message
 3. Exchange of IPFS hash to other party
 4. Other party request hash content of encrypted message from IPFS
-5. Decrypt message using one-time pad information that has been physically exchanged securly
+5. Decrypt message using one-time pad information that has been exchanged securely
 
 ## Chainlink OTP Logical Overview
+![Screenshot](./images/chainlink_otp_logica_overview.png)
+
+
