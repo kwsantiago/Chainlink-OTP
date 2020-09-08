@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./images/otp.jpeg" />
+  <img src="./images/OTP_center.png" />
 </p>
 
 # Chainlink One Time Pad (OTP) Project
