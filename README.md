@@ -38,7 +38,6 @@ Thomas Greco (TG)
 4. Other party request hash content of encrypted message from IPFS
 5. Decrypt message using one-time pad information that has been exchanged securely
 
-## Chainlink OTP Logical Overview
 <p align="center">
   <img src="./images/chainlink_otp_logica_overview.png" />
 </p>
