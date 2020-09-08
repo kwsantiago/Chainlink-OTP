@@ -1,10 +1,10 @@
-<p align="center">
-  <img src="./images/otp.jpeg" />
-</p>
-
 # Chainlink One Time Pad (OTP) Project
 
 Chainlink Hackathon 2020: Building Universally Connected Smart Contracts
+
+<p align="center">
+  <img src="./images/OTP_center.png" />
+</p>
 
 # Introduction
 
@@ -16,9 +16,9 @@ Included is a scope of work based on the project requirements for the workshop.
 
 ## Team Members
 
-Kyle W. Santiago (KWS),
-Thomas Potter (TC),
-William K. Santiago (WKS),
+Kyle W. Santiago (KWS)\
+Thomas Potter (TC)\
+William K. Santiago (WKS)\
 Thomas Greco (TG)
 
 ## Proposal Overview
