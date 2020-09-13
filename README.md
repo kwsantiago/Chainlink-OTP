@@ -25,10 +25,10 @@ Thomas Greco (TG)
 
 ### Phase I - Creating the OTP
 
-1. Create random keys one-time pads (OTPs) that are indexed with prefix reference number using one-time random key provided by Chainlink VRF
-2. Format the message
-3. Encrypt the message using one-time random key from the OTP
-4. Transfer encrypted message to other party
+1. Request a random number using Chainlink VRF
+2. Use the random number to create one-time pads (OTPs)
+3. (Optional) Encrypt a user provided message using the OTPs
+4. Transfer encrypted message to the other party
 
 ### Possible Phase II (Optional) - Sending the encrypted message to receiver over IPFS
 
