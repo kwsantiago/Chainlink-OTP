@@ -10,7 +10,7 @@ Chainlink Hackathon 2020: Building Universally Connected Smart Contracts
 
 ## Project Objectives
 
-Team PrivKey is pleased to present this hackathon proposal project for one-time pads for secret communications. The smart contract will require a random key. A key is a block of numbers that is used to transform an original message (the plaintext) into a coded message (the ciphertext).
+Team PrivKey is pleased to present this hackathon proposal project for one-time pads (OTP). OTP is an encryption technique in which each character of a message is combined with a character from a random key stream. Many OTP generators exist online, but they use pseudo random number generators in order to create the random key stream. To add to the security of generating a OTP, this project uses Chainlink VRF which allows the user to verify the randomness used in creating the OTP.
 
 Included is a scope of work based on the project requirements for the workshop.
 
