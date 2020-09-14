@@ -30,14 +30,6 @@ Thomas Greco (TG)
 3. (Optional) Encrypt a user provided message using the OTPs
 4. Transfer encrypted message to the other party
 
-### Possible Phase II (Optional) - Sending the encrypted message to receiver over IPFS
-
-1. Put encrypted message in IPFS
-2. IPFS returns hash content of encrypted message
-3. Exchange of IPFS hash to other party
-4. Other party request hash content of encrypted message from IPFS
-5. Decrypt message using one-time pad information that has been exchanged securely
-
 <p align="center">
   <img src="./images/Chainlink_OTP_Overview.png" />
 </p>
