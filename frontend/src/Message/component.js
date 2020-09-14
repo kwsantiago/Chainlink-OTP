@@ -14,7 +14,11 @@ const Message = ({ messageText = "" }) => {
     return messageInput;
   };
   return (
-    <div>
+    <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    }}>
       <label>
         Message Input
         <input type="text" value={messageInput} onChange={setter(setMessage)} />

@@ -23,10 +23,14 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{
+    display: 'flex',
+    alignItems: 'right',
+    justifyContent: 'right',
+    }}>
       <OTPGenerator />
       <div>
-        <h2>Current Metamask Account {account.length > 0 && account[0]}</h2>
+        <h3>Current Metamask Account {account.length > 0 && account[0]}</h3>
         <Message />
       </div>
     </div>
