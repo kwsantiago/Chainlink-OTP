@@ -1,19 +1,37 @@
 import React, { useState } from "react";
 import { pad_of_lowercase } from "../utils/VRF";
-
+import { Button, Input, Box, Table } from "rimble-ui";
+import cuid from "cuid";
 const IteratePads = ({ pads = [] }) =>
-  pads.length > 0 && pads.map((x, i) => <li key={i}>{x},</li>);
+  pads.length > 0 &&
+  pads.map((x, i) => (
+    <tr key={cuid()}>
+      <td>Pad {++i}</td>
+      <td>{x}</td>
+    </tr>
+  ));
 
-const OTPGenerator = ({
-  defaultPadLength = 8,
-  defaultPadCount = 5,
-  onClick,
-}) => {
+const Results = ({ pads }) => (
+  <Table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>OTP Results</th>
+      </tr>
+    </thead>
+    <tbody>
+      <IteratePads pads={pads} />
+    </tbody>
+  </Table>
+);
+
+const OTPGenerator = ({ defaultPadLength = 8, defaultPadCount = 5 }) => {
   const [padLength, setPadLength] = useState(defaultPadLength);
   const [padCount, setPadCount] = useState(defaultPadCount);
   const [result, setResult] = useState([]);
 
   const onGeneratePads = () => {
+    console.log({ padLength, padCount });
     const result = pad_of_lowercase(padLength, padCount);
     console.log({ result });
     setResult(result);
@@ -25,39 +43,34 @@ const OTPGenerator = ({
     set(value);
   };
   return (
-    <div>
-      <label htmlFor="padLength">
-        Set Pad Length
-        <input
-          name="padLength"
-          id="padLength"
-          type="number"
-          value={padLength}
-          onChange={setter(setPadLength)}
-        />
-      </label>
-      <label htmlFor="padCount">
-        Set Number of Pads
-        <input
-          name="padCount"
-          id="padCount"
-          type="number"
-          value={padCount}
-          onChange={setter(setPadCount)}
-        />
-      </label>
-      <button onClick={onGeneratePads}>Generate Pads</button>
-      <h3>OTP Results:</h3>
-      <ul
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          listStyleType: "none",
-        }}
+    <Box mt={3}>
+      <Input
+        name="padLength"
+        id="padLength"
+        type="number"
+        value={padLength}
+        placeholder="Set Pad Length"
+        onChange={setter(setPadLength)}
+      />
+      <Input
+        name="padCount"
+        id="padCount"
+        type="number"
+        value={padCount}
+        onChange={setter(setPadCount)}
+        placeholder="Set Number of Pads"
+      />
+
+      <Button
+        width={[1, "auto", "auto"]}
+        mt={2}
+        mb={2}
+        onClick={onGeneratePads}
       >
-        <IteratePads pads={result} />
-      </ul>
-    </div>
+        Generate Pads
+      </Button>
+      <Results pads={result} />
+    </Box>
   );
 };
 

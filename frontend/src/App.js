@@ -1,40 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
-import { ethEnabled } from "./utils/web3";
-import Message from "./Message/component";
 import OTPGenerator from "./OTPGenerator/component";
-
-const App = () => {
-  const [account, setAccount] = useState([]);
-
-  useEffect(() => {
-    ethEnabled();
-
-    let web3 = window.web3;
-    web3.eth
-      .getAccounts()
-      .then((response) => {
-        setAccount(response);
-      })
-      .catch((err) => {
-        console.log("Error::", err);
-        setAccount([]);
-      });
-  }, []);
-
+import withTheme from "./shared/HOCs/withTheme";
+import useWeb3 from "./shared/hooks/withWeb3";
+import { EthAddress } from "rimble-ui";
+import Card from "./shared/UI/Card";
+const DisplayAddress = ({ account = "" }) => <EthAddress address={account} />;
+const App = (props) => {
+  const { account, web3 } = useWeb3();
   return (
-    <div style={{
-    display: 'flex',
-    alignItems: 'right',
-    justifyContent: 'right',
-    }}>
+    <Card>
+      {account.length > 1 && <DisplayAddress account={account} />}
       <OTPGenerator />
-      <div>
-        <h3>Current Metamask Account {account.length > 0 && account[0]}</h3>
-        <Message />
-      </div>
-    </div>
+    </Card>
   );
 };
 
-export default App;
+export default withTheme(App);
