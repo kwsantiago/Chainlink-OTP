@@ -26,8 +26,11 @@ Thomas Greco (TG)
 ### Phase I - Creating the OTP
 
 **1.** Request a random number using Chainlink VRF
+
 **2.** Use the random number to create one-time pads (OTPs)
+
 **3.** (Optional) Encrypt a user provided message using the OTPs
+
 **4.** Transfer encrypted message to the other party
 
 
