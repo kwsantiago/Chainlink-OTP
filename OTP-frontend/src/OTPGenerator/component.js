@@ -44,6 +44,7 @@ const OTPGenerator = ({ defaultPadLength = 8, defaultPadCount = 5 }) => {
   };
   return (
     <Box mt={3}>
+      <div>Pad Length</div>
       <Input
         name="padLength"
         id="padLength"
@@ -52,6 +53,7 @@ const OTPGenerator = ({ defaultPadLength = 8, defaultPadCount = 5 }) => {
         placeholder="Set Pad Length"
         onChange={setter(setPadLength)}
       />
+      <div>Pad Count</div>
       <Input
         name="padCount"
         id="padCount"
