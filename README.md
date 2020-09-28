@@ -2,7 +2,7 @@
 
 Chainlink Hackathon 2020: Building Universally Connected Smart Contracts
 
-### Demo Link: https://github.com/kwsantiago/Chainlink-OTP.git
+### Demo Link: http://otp-frontend.s3-website-us-east-1.amazonaws.com/
 
 <p align="center">
   <img src="./images/OTP_center.png" />
