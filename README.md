@@ -33,6 +33,7 @@ Thomas Greco (TG)
 
 **4.** Transfer encrypted message to the other party
 
+Video demonstration: https://youtu.be/DToyi2CBTJk
 
 <p align="center">
   <img src="./images/Chainlink_OTP_Overview.png" />
