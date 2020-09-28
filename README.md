@@ -1,8 +1,6 @@
-# Chainlink One Time Pad (OTP) Project
+# Chainlink Hackathon 2020: One Time Pad (OTP) Project
 
-Chainlink Hackathon 2020: Building Universally Connected Smart Contracts
-
-### Demo Link: http://otp-frontend.s3-website-us-east-1.amazonaws.com/
+### Try it out [here](http://otp-frontend.s3-website-us-east-1.amazonaws.com/)! (Note that you must first connect to your MetaMask and refresh the page in order to view the front end)
 
 <p align="center">
   <img src="./images/OTP_center.png" />
