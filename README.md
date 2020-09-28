@@ -25,9 +25,9 @@ Thomas Greco (TG)
 
 ### Phase I - Creating the OTP
 
-**1.** Request a random number using Chainlink VRF
+**1.** User requests OTPs based on how long they want the pads to be and how many they want.
 
-**2.** Use the random number to create one-time pads (OTPs)
+**2.** A VRF call is made requesting a random number which will then be use to create one-time pads (OTPs)
 
 **3.** (Optional) Encrypt a user provided message using the OTPs
 
