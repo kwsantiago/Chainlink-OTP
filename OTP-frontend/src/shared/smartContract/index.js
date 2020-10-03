@@ -1,8 +1,9 @@
-/**
- * ABI & Contract Address for generating random seed
- * See repl.it implementation: https://repl.it/@tgreco/GetRandomNumberNodeJS
- */
+const Web3 = require("web3");
 
+const web3 = new Web3("https://kovan.infura.io/v3/cc37f552c1354792b23c88d090c4a02f");
+const { eth } = web3;
+const id = x => x;
+// Set up contract instance
 const abi = [
   {
     inputs: [
@@ -72,34 +73,8 @@ const abi = [
   },
   {
     inputs: [],
-    name: "withdrawLink",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
     stateMutability: "nonpayable",
     type: "constructor",
-  },
-  {
-    inputs: [
-      {
-        internalType: "bytes32",
-        name: "",
-        type: "bytes32",
-      },
-    ],
-    name: "nonces",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
   },
   {
     inputs: [],
@@ -116,4 +91,29 @@ const abi = [
   },
 ];
 
-const address = "0xdb86B224d4c4E6a90bA9Cd9590ea56d880DFa603";
+const address = "0x8eabb3B41e66f16F2eddA72Bc77Ec0B63b934b00";
+const { methods } = new eth.Contract(abi, address);
+const { getRandomNumber, randomResult } = methods;
+
+const requestRandomNumber = (seed) =>
+  getRandomNumber(seed).call()
+    .then(() => randomResult().call())
+    .catch(err => {
+      console.log("error::", err)
+      return err
+    });
+
+const seedNumber = eth.getBlockNumber();
+const randomNumber = seedNumber.then(requestRandomNumber)
+
+let state = {
+  randomNumber: null
+};
+
+const getVRF = randomNumber.then(response => {
+  state = { randomNumber: response }
+  console.log({state})
+  return state
+})
+
+export default getVRF;
