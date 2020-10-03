@@ -1,6 +1,6 @@
-# Chainlink One Time Pad (OTP) Project
+# Chainlink Hackathon 2020: One Time Pad (OTP) Project
 
-Chainlink Hackathon 2020: Building Universally Connected Smart Contracts
+### Try it out [here](http://otp-frontend.s3-website-us-east-1.amazonaws.com/)! (Note that you must first connect to your MetaMask and refresh the page in order to view the front end)
 
 <p align="center">
   <img src="./images/OTP_center.png" />
@@ -25,14 +25,15 @@ Thomas Greco (TG)
 
 ### Phase I - Creating the OTP
 
-**1.** Request a random number using Chainlink VRF
+**1.** User requests OTPs based on how long they want the pads to be and how many they want.
 
-**2.** Use the random number to create one-time pads (OTPs)
+**2.** A VRF call is made requesting a random number which will then be use to create one-time pads (OTPs)
 
 **3.** (Optional) Encrypt a user provided message using the OTPs
 
 **4.** Transfer encrypted message to the other party
 
+Video demonstration: https://youtu.be/DToyi2CBTJk
 
 <p align="center">
   <img src="./images/Chainlink_OTP_Overview.png" />
