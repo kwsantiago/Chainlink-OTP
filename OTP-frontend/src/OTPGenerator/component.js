@@ -62,15 +62,14 @@ const OTPGenerator = ({ defaultPadLength = 8, defaultPadCount = 5 }) => {
         onChange={setter(setPadCount)}
         placeholder="Set Number of Pads"
       />
-
-      <Button
+      <div><Button
         width={[1, "auto", "auto"]}
         mt={2}
         mb={2}
         onClick={onGeneratePads}
       >
         Generate Pads
-      </Button>
+      </Button></div>
       <Results pads={result} />
     </Box>
   );
