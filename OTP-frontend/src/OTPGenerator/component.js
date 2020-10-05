@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { pad_of_lowercase } from "../utils/VRF";
 import { Button, Input, Box, Table } from "rimble-ui";
 import cuid from "cuid";
+
 const IteratePads = ({ pads = [] }) =>
   pads.length > 0 &&
   pads.map((x, i) => (
