@@ -27,12 +27,12 @@ const Results = ({ pads }) => (
 );
 
 const OTPGenerator = () => {
-  const [padLength, setPadLength] = useState(9);
+  const [padLength, setPadLength] = useState(6);
   const [result, setResult] = useState([]);
 
   const onGeneratePads = async function otpGen() {
     console.log(padLength);
-    const result = await genPads(9);
+    const result = await genPads(6);
     console.log({ result });
     setResult(result);
   };
