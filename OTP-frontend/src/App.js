@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
-import OTPGenerator from "./OTPGenerator/component";
-import withTheme from "./shared/HOCs/withTheme";
-import useWeb3 from "./shared/hooks/withWeb3";
+import "./assets/css/App.css";
+import OTPGenerator from "./assets/utils/OTPGenerator/component";
+import withTheme from "./assets/shared/HOCs/withTheme";
+import useWeb3 from "./assets/shared/hooks/withWeb3";
 import { EthAddress } from "rimble-ui";
-import Card from "./shared/UI/Card";
+import Card from "./assets/shared/UI/Card";
 
 const DisplayAddress = ({ account = "" }) => <EthAddress address={account} />;
 const App = (props) => {

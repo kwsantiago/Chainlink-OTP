@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { genPads } from "../utils/VRF";
+import { genPads } from "../VRF";
 import { Button, Input, Box, Table } from "rimble-ui";
 import cuid from "cuid";
 
