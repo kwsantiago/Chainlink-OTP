@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { pad_of_lowercase } from "../utils/VRF";
+import { genPads } from "../utils/VRF";
 import { Button, Input, Box, Table } from "rimble-ui";
 import cuid from "cuid";
 
@@ -26,14 +26,13 @@ const Results = ({ pads }) => (
   </Table>
 );
 
-const OTPGenerator = ({ defaultPadLength = 8, defaultPadCount = 5 }) => {
-  const [padLength, setPadLength] = useState(defaultPadLength);
-  const [padCount, setPadCount] = useState(defaultPadCount);
+const OTPGenerator = () => {
+  const [padLength, setPadLength] = useState(9);
   const [result, setResult] = useState([]);
 
-  const onGeneratePads = () => {
-    console.log({ padLength, padCount });
-    const result = pad_of_lowercase(padLength, padCount);
+  const onGeneratePads = async function otpGen() {
+    console.log(padLength);
+    const result = await genPads(9);
     console.log({ result });
     setResult(result);
   };
@@ -53,15 +52,6 @@ const OTPGenerator = ({ defaultPadLength = 8, defaultPadCount = 5 }) => {
         value={padLength}
         placeholder="Set Pad Length"
         onChange={setter(setPadLength)}
-      />
-      <div>Pad Count</div>
-      <Input
-        name="padCount"
-        id="padCount"
-        type="number"
-        value={padCount}
-        onChange={setter(setPadCount)}
-        placeholder="Set Number of Pads"
       />
       <div><Button
         width={[1, "auto", "auto"]}
