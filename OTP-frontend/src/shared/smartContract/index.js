@@ -116,14 +116,12 @@ const abi = [{
 	}
 ]
 
-const address = "0x8eabb3B41e66f16F2eddA72Bc77Ec0B63b934b00";
+const address = "0x2487d4ec9c4a721595925005be6fd2eba0c5628b";
 const vrfContract = new eth.Contract(abi, address);
 
-async function getVRF(){
-    var seed = Math.random();
-    var result = await vrfContract.methods.getRandomNumber(seed).call();
-    console.log(result);
-    return result;
+export async function getVRF(){
+    var seed = parseInt(Math.random());
+    await vrfContract.methods.getRandomNumber(seed).call();
 }
 
 export const vrfNumber = async () => {
