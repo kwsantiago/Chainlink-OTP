@@ -1,4 +1,4 @@
-# Chainlink VRF One Time Pad (OTP)
+# Chainlink VRF One-Time-Pad (OTP)
 
 ### Try it out [here](https://chainlinkotp.privkey.io/)! (Note that you must first connect to your MetaMask and refresh the page in order to view the front end)
 
@@ -16,7 +16,7 @@
 
 **2.** A VRF call is made requesting a random number which will then be use to create one-time pads (OTPs)
 
-**3.** (Optional) Encrypt a user provided message using the OTPs
+**3.** Encrypt the original message using the pads generated
 
 **4.** Transfer encrypted message to the other party
 
