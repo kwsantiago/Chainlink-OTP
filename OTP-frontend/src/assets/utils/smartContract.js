@@ -146,21 +146,32 @@ var seed = parseInt(Math.random())
 
 const tx = {
   // this could be provider.addresses[0] if it exists
-  from: eth.accounts[0],
+  from: null,
   // target address, this could be a smart contract address
-  to: 0x2487D4EC9C4a721595925005bE6fd2EBA0c5628B,
+  to: "0x2487D4EC9C4a721595925005bE6fd2EBA0c5628B",
   // optional if you want to specify the gas limit
   data: vrfContract.methods.getRandomNumber(seed).encodeABI()
 };
 
 //const signPromise = eth.accounts.signTransaction(tx, tx.from);
 
-export async function getVRF(){
-    console.log(window.ethereum)
-    //signPromise();
+
+async function getVRF () {
+    const signPromise = null
+    await window.web3.eth.getAccounts().then(async e => {
+        tx.from = e[0];
+        var result = await window.web3.eth.sendTransaction(tx);
+        return result;
+        // signPromise = window.web3.eth.signTransaction(tx, tx.from);
+    })
+    // await signPromise.then((signedTx) => {
+    // 	const sendTx = window.web3.eth.sendSignedTransaction(signedTx.raw || signedTx.rawTransaction);
+    // });
 }
 
-export const vrfNumber = async () => {
+const vrfNumber = async () => {
     var result = await vrfContract.methods.randomResult().call();
     return result;
 }
+
+export { getVRF, vrfNumber };
