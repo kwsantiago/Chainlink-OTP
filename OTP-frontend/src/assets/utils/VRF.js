@@ -1,4 +1,4 @@
-import { vrfNumber } from "./smartContract"
+import { vrfNumber, getVRF } from "./smartContract"
 
 // from https://ourcodeworld.com/articles/read/278/how-to-split-an-array-into-chunks-of-the-same-size-easily-in-javascript
 function chunkArray(myArray, chunk_size){
@@ -15,7 +15,9 @@ function chunkArray(myArray, chunk_size){
     return tempArray;
 }
 
+// Turn each character of the VRF number into letters and return the array
 async function genPads(length){
+    await getVRF();
     var vrfNum = await vrfNumber();
     const arrayOfDigits = Array.from(String(vrfNum), Number);
     var arrayOfLetters = [];
