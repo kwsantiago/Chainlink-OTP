@@ -24,6 +24,10 @@ async function genPads(length){
     for(let i = 0; i < arrayOfDigits.length; i++)
         arrayOfLetters.push(String.fromCharCode(97 + arrayOfDigits[i]))
     arrayOfLetters = chunkArray(arrayOfLetters, length);
+    for(let i = 0; i < arrayOfLetters.length; i++){
+        if(arrayOfLetters[i].length < length)
+            delete arrayOfLetters[i];
+    }
     return arrayOfLetters;
 }
 
