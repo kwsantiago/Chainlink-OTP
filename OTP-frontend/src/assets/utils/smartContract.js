@@ -153,25 +153,22 @@ const tx = {
   data: vrfContract.methods.getRandomNumber(seed).encodeABI()
 };
 
-//const signPromise = eth.accounts.signTransaction(tx, tx.from);
-
-
-async function getVRF () {
-    //const signPromise = null
+const vrfNumber = async () => {
+    var allowed = true;
     await window.web3.eth.getAccounts().then(async e => {
+        if(!e[0]){
+            console.log("NEED ADDRESS");
+            allowed = false;
+            return;
+        }
         tx.from = e[0];
         var result = await window.web3.eth.sendTransaction(tx);
         return result;
-        // signPromise = window.web3.eth.signTransaction(tx, tx.from);
     })
-    // await signPromise.then((signedTx) => {
-    // 	const sendTx = window.web3.eth.sendSignedTransaction(signedTx.raw || signedTx.rawTransaction);
-    // });
-}
-
-const vrfNumber = async () => {
+    if(!allowed)
+        return;
     var result = await vrfContract.methods.randomResult().call();
     return result;
 }
 
-export { getVRF, vrfNumber };
+export { vrfNumber };
