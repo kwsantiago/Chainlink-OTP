@@ -115,41 +115,17 @@ const abi = [{
 		"type": "function"
 	}
 ]
-/*
-var provider = null;
-var signer = null;
-if (window.ethereum) {
-        provider = new ethers.providers.Web3Provider(window.ethereum)
 
-        signer = provider.getSigner()
-        try {
-            console.log(provider)
-            window.ethereum.enable().then(async () => {
-                if (!web3.currentProvider.selectedAddress) { // if wallet is other then metamask
-                      // handle web3 not working
-                    return
-                }
-                // if everything ok
-                
-            }).catch((e) => {
-                // handle web3 not working
-            })
-        } catch (e) {
-            // handle web3 not working
-        }
-}
-*/
 const address = "0x2487d4ec9c4a721595925005be6fd2eba0c5628b";
 const vrfContract = new eth.Contract(abi, address);
 
 var seed = parseInt(Math.random())
 
 const tx = {
-  // this could be provider.addresses[0] if it exists
   from: null,
-  // target address, this could be a smart contract address
+  // VRF Contract
   to: "0x2487D4EC9C4a721595925005bE6fd2EBA0c5628B",
-  // optional if you want to specify the gas limit
+  // gas limit for requestVRFNumber
   data: vrfContract.methods.getRandomNumber(seed).encodeABI()
 };
 
