@@ -134,6 +134,7 @@ const vrfNumber = async () => {
     await window.web3.eth.getAccounts().then(async e => {
         if(!e[0]){
             console.log("NEED ADDRESS");
+            window.ethereum && window.ethereum.enable();
             allowed = false;
             return;
         }
