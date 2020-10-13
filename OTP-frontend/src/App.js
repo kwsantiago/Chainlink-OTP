@@ -11,7 +11,7 @@ const App = (props) => {
   const { account, web3 } = useWeb3();
   return (
     <Card>
-        {account && account.length > 1 && <DisplayAddress account={account} />}
+        {account && <DisplayAddress account={account} />}
       <OTPGenerator />
     </Card>
   );
