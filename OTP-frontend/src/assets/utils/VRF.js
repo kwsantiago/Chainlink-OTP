@@ -17,7 +17,6 @@ function chunkArray(myArray, chunk_size){
 
 // Turn each character of the VRF number into letters and return the array
 async function genPads(length){
-    await getVRF();
     var vrfNum = await vrfNumber();
     const arrayOfDigits = Array.from(String(vrfNum), Number);
     var arrayOfLetters = [];
