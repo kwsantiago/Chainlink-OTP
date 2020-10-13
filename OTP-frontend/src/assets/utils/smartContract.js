@@ -157,7 +157,7 @@ const tx = {
 
 
 async function getVRF () {
-    const signPromise = null
+    //const signPromise = null
     await window.web3.eth.getAccounts().then(async e => {
         tx.from = e[0];
         var result = await window.web3.eth.sendTransaction(tx);
