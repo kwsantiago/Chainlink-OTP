@@ -2,7 +2,7 @@ import React from "react";
 import "./assets/css/App.css";
 import OTPGenerator from "./assets/utils/otpGenerator.js";
 import withTheme from "./assets/shared/HOCs/withTheme";
-import useWeb3 from "./assets/shared/hooks/withWeb3";
+import useWeb3 from "./assets/shared/hooks/useWeb3";
 import { EthAddress } from "rimble-ui";
 import Card from "./assets/shared/UI/Card";
 
