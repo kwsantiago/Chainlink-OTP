@@ -1,6 +1,6 @@
 # Chainlink VRF One-Time-Pad (OTP)
 
-### Try it out [here](https://chainlinkotp.privkey.io/)! (Note that you must first connect to your MetaMask and refresh the page in order to view the front end)
+### Try it out [here](https://chainlinkotp.privkey.io/)!
 
 <p align="center">
   <img src="./images/OTP_center.png" />
