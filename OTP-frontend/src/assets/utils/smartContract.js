@@ -133,7 +133,6 @@ const vrfNumber = async () => {
     var allowed = true;
     await window.web3.eth.getAccounts().then(async e => {
         if(!e[0]){
-            console.log("NEED ADDRESS");
             window.ethereum && window.ethereum.enable();
             allowed = false;
             return;
@@ -143,7 +142,7 @@ const vrfNumber = async () => {
         return result;
     })
     if(!allowed)
-        return;
+        return [];
     var result = await vrfContract.methods.randomResult().call();
     return result;
 }
