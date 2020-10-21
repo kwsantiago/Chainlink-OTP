@@ -20,6 +20,8 @@ One-Time-Pads (OTP) are an encryption technique in which each character of a mes
 
 **4.** Transfer encrypted message to the other party
 
+Thanks!
+
 Video demonstration: https://youtu.be/DToyi2CBTJk
 
 <p align="center">
