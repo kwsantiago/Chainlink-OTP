@@ -1,6 +1,5 @@
 const Web3 = require("web3");
-
-const web3 = new Web3("https://kovan.infura.io/v3/cc37f552c1354792b23c88d090c4a02f");
+const web3 = new Web3(Web3.givenProvider);
 const { eth } = web3;
 const id = x => x;
 // Set up contract instance
