@@ -1,6 +1,6 @@
 # Chainlink VRF One-Time-Pad (OTP)
 
-<h3 align="center">Try it out <a href="https://chainlinkotp.privkey.io">here</a>!</h3>
+<h3 align="center">Try it out <a href="https://chainlinkotp.privkey.io">here</a>! (Kovan Testnet)</h3>
 
 <p align="center">
   <img src="./images/OTP_center.png" />
