@@ -115,15 +115,15 @@ const abi = [{
 	}
 ]
 
-const address = "0x2487d4ec9c4a721595925005be6fd2eba0c5628b";
-const vrfContract = new eth.Contract(abi, address);
+const VRFaddress = "0x2487d4ec9c4a721595925005be6fd2eba0c5628b";
+const vrfContract = new eth.Contract(abi, VRFaddress);
 
 var seed = parseInt(Math.random())
 
 const tx = {
   from: null,
   // VRF Contract
-  to: "0x2487D4EC9C4a721595925005bE6fd2EBA0c5628B",
+  to: VRFaddress,
   // gas limit for requestVRFNumber
   data: vrfContract.methods.getRandomNumber(seed).encodeABI()
 };
