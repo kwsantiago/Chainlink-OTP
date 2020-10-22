@@ -1,6 +1,6 @@
 # Chainlink VRF One-Time-Pad (OTP)
 
-### Try it out [here](https://chainlinkotp.privkey.io/)!
+<h3 align="center">Try it out <a href="https://chainlinkotp.privkey.io">here</a>!</h3>
 
 <p align="center">
   <img src="./images/OTP_center.png" />
@@ -8,7 +8,7 @@
 
 ## Project Objectives
 
-**PrivKey** is pleased to present this project for one-time pads (OTP). OTP is an encryption technique in which each character of a message is combined with a character from a random key stream. Many OTP generators exist online, but they use pseudo random number generators in order to create the random key stream. To add to the security of generating OTPs, this project uses Chainlink VRF which allows the user to verify the randomness used in creating the OTPs.
+One-Time-Pads (OTP) are an encryption technique in which each character of a message is combined with a character from a random key stream. Many OTP generators exist online, but they use pseudo random number generators in order to create the random key stream. To add to the security of generating OTPs, this project uses Chainlink VRF which allows the user to verify the randomness used in creating the OTPs.
 
 ## Creating the OTP
 
