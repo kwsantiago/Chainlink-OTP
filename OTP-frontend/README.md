@@ -1,5 +1,3 @@
-## Note that you must connect to your MetaMask and refresh the page in order to view the front end.
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
