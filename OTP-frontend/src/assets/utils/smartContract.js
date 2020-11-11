@@ -120,26 +120,18 @@ const vrfContract = new eth.Contract(abi, VRFaddress);
 
 var seed = parseInt(Math.random())
 
-const tx = {
-  from: null,
-  to: VRFaddress,
-  data: vrfContract.methods.getRandomNumber(seed).encodeABI()
-};
-
 const vrfNumber = async () => {
     await window.web3.eth.getAccounts().then(async e => {
         if(!e[0])
             window.ethereum && window.ethereum.enable();
         await window.web3.eth.sendTransaction({
             from: e[0],
-            to: factoryAddress,
-            data: factoryContract.methods.createRandomWinner(addressList).encodeABI()
+            to: VRFaddress,
+            data: vrfContract.methods.getRandomNumber(seed).encodeABI()
         });
     })
     const result = await vrfContract.methods.randomResult().call();
     return result;
 }
-
-
 
 export { vrfNumber };
