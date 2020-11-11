@@ -122,9 +122,7 @@ var seed = parseInt(Math.random())
 
 const tx = {
   from: null,
-  // VRF Contract
   to: VRFaddress,
-  // gas limit for requestVRFNumber
   data: vrfContract.methods.getRandomNumber(seed).encodeABI()
 };
 
@@ -135,7 +133,6 @@ const vrfNumber = async () => {
         await window.web3.eth.sendTransaction({
             from: e[0],
             to: factoryAddress,
-            // gas limit for createRandomWinner
             data: factoryContract.methods.createRandomWinner(addressList).encodeABI()
         });
     })
