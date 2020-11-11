@@ -129,21 +129,20 @@ const tx = {
 };
 
 const vrfNumber = async () => {
-    var allowed = true;
     await window.web3.eth.getAccounts().then(async e => {
-        if(!e[0]){
+        if(!e[0])
             window.ethereum && window.ethereum.enable();
-            allowed = false;
-            return;
-        }
-        tx.from = e[0];
-        var result = await window.web3.eth.sendTransaction(tx);
-        return result;
+        await window.web3.eth.sendTransaction({
+            from: e[0],
+            to: factoryAddress,
+            // gas limit for createRandomWinner
+            data: factoryContract.methods.createRandomWinner(addressList).encodeABI()
+        });
     })
-    if(!allowed)
-        return [];
-    var result = await vrfContract.methods.randomResult().call();
+    const result = await vrfContract.methods.randomResult().call();
     return result;
 }
+
+
 
 export { vrfNumber };
